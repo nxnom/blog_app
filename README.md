@@ -74,6 +74,9 @@ Install this project with:
 bundle install
 ```
 
+And Create `.env` file in the root directory add the configurations.
+You can use the `.env.example` file as a template.
+
 ### Usage
 
 To run the project, execute the following command:

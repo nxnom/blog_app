@@ -9,6 +9,9 @@ node_modules
 # Ignore bundler config.
 /.bundle
 
+# Ignore lock file.
+/Gemfile.lock
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
