@@ -4,14 +4,14 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  class << self
-    def recent_comments(post_id)
-      Comment.where(post_id:).order(created_at: :desc).limit(5)
-    end
+  after_save :update_posts_counter
 
-    def update_posts_counter(user_id)
-      user = User.find(user_id)
-      user.update(posts_counter: user.posts.count)
-    end
+  def recent_comments
+    Comment.where(post_id: id).order(created_at: :desc).limit(3)
+  end
+
+  def update_posts_counter
+    user = User.find(author_id)
+    user.update(posts_counter: user.posts.count)
   end
 end
