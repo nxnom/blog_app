@@ -10,7 +10,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -48,9 +48,9 @@ The Blog app will be a classic example of a blog website. You will create a full
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 🚀 Live Demo
-
-Coming soon
+<!-- ### 🚀 Live Demo -->
+<!---->
+<!-- Coming soon -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
