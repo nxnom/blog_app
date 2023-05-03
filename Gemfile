@@ -74,3 +74,5 @@ group :test do
 end
 
 gem 'dotenv-rails', groups: %i[development test]
+
+gem 'rspec-rails', '~> 6.0', group: :development
