@@ -6,7 +6,8 @@ exclude:
   - test/**/*
   - vendor/**/*
   - ".bundle/**/*"
-require: []
+require:
+  - activerecord
 domains: []
 reporters:
   - rubocop
