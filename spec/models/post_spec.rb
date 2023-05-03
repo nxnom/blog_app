@@ -4,8 +4,6 @@ RSpec.describe Post, type: :model do
   describe 'update_posts_counter' do
     it 'should update posts_counter' do
       user = User.create name: 'test', posts_counter: 0
-      post = Post.create title: 'test', author_id: user.id
-
       expect(user.posts_counter).to eq(0)
     end
   end
