@@ -1,5 +1,5 @@
 .user-card {
-  display: grid !important;
+  display: grid;
   grid-template-columns: 140px 1fr;
   gap: 20px;
 }

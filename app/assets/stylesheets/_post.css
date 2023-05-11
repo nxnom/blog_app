@@ -1,0 +1,31 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.post-card:hover {
+  border-color: var(--accent);
+}
+
+.post-card h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.post-card p {
+  text-align: left;
+  color: gray;
+  max-lines: 2;
+  text-overflow: ellipsis;
+  height: 3.6em;
+}
+
+.post-card span {
+  padding-top: 12px;
+  font-size: 14px;
+  text-align: right;
+  color: gray;
+  opacity: 0.8;
+}

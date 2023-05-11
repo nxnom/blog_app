@@ -1,1 +1,13 @@
-<h1>Here is a view for user</h1>
+<main>
+  <%= render "shared/user", user: @user %>
+  <blockquote> 
+    <cite>Bio</cite></br></br>
+    <%= @user.bio %> 
+  </blockquote>
+
+  <% @user.recent_posts.each do |post| %>
+    <%= render "shared/post", post: post %>
+  <% end %>
+
+  <%= link_to "See all posts", user_posts_path(@user), class:"button self-center" %>
+</main>

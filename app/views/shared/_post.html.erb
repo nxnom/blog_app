@@ -1,0 +1,10 @@
+<%= link_to user_post_path(post) do %>
+  <%= stylesheet_link_tag '_post' %>
+  <article id="<%= dom_id post %>" class="post-card">
+    <h6><%= post.title %></h6>
+    <p><%= post.text %></p>
+    <span> 
+      Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+    </span>
+  </article>
+<% end %>

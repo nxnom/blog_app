@@ -13,6 +13,22 @@
  * require_tree . // add = to re-enable auto-include all css files in this directory
  *= require_self
  */
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none !important;
+}
+
+.self-center {
+  align-self: center;
 }
