@@ -8,20 +8,22 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { greater_than_or_equal_to: 0 }
 
-  before_save :set_defaults
+  before_validation :set_defaults
   after_save :update_posts_counter
-
-  def set_defaults
-    self.comments_counter ||= 0
-    self.likes_counter ||= 0
-  end
 
   def recent_comments
     Comment.where(post_id: id).order(created_at: :desc).limit(3)
   end
 
+  private
+
   def update_posts_counter
     user = User.find(author_id)
     user.update(posts_counter: user.posts.count)
+  end
+
+  def set_defaults
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
   end
 end

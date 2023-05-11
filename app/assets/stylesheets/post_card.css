@@ -1,0 +1,39 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.post-card:hover {
+  border-color: var(--accent);
+}
+
+.post-card .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.post-card .col-reverse {
+  flex-direction: column-reverse;
+}
+
+.post-card h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.post-card p {
+  color: gray;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+
+.post-card section {
+  padding: 16px 0;
+  margin: 0;
+  margin-top: 20px;
+}

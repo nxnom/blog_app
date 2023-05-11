@@ -1,1 +1,3 @@
-<h1>Here is a post for user</h1>
+<main>
+  <%= render "shared/post_card", post: @post, user: params['user_id'], is_post_view: true %>
+</main>
