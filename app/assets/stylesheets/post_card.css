@@ -15,11 +15,11 @@
 }
 
 .post-card p {
-  text-align: left;
   color: gray;
-  max-lines: 2;
-  text-overflow: ellipsis;
-  height: 3.6em;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
 }
 
 .post-card span {
