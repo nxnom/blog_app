@@ -1,5 +1,5 @@
 <%= link_to user_post_path(post) do %>
-  <%= stylesheet_link_tag '_post' %>
+  <%= stylesheet_link_tag 'post_card' %>
   <article id="<%= dom_id post %>" class="post-card">
     <h6><%= post.title %></h6>
     <p><%= post.text %></p>
