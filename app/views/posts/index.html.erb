@@ -1,1 +1,5 @@
-<h1>Here is a list of posts<h1>
+<main>
+  <%= render "shared/user_card", user: @user %>
+  </br>
+  <%= render partial: "shared/post_card", collection: @posts, as: :post, locals: { user: @user, show_comments: true } %>
+</main>

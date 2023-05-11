@@ -5,9 +5,7 @@
     <%= @user.bio %> 
   </blockquote>
 
-  <% @user.recent_posts.each do |post| %>
-    <%= render "shared/post_card", post: post %>
-  <% end %>
+  <%= render partial: "shared/post_card", collection: @user.recent_posts, as: :post, locals: { user: @user } %>
 
   <%= link_to "See all posts", user_posts_path(@user), class:"button self-center" %>
 </main>

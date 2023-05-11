@@ -29,6 +29,14 @@ a {
   text-decoration: none !important;
 }
 
+span {
+  padding-top: 12px;
+  font-size: 14px;
+  text-align: right;
+  color: gray;
+  opacity: 0.8;
+}
+
 .self-center {
   align-self: center;
 }

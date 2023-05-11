@@ -1,4 +1,4 @@
-<%= link_to user_post_path(post) do %>
+<%= link_to user_post_path(user, post) do %>
   <%= stylesheet_link_tag 'post_card' %>
   <article id="<%= dom_id post %>" class="post-card">
     <h6><%= post.title %></h6>
@@ -6,5 +6,14 @@
     <span> 
       Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
     </span>
+
+    <% show_comments ||= false %>
+
+    <% if show_comments && post.comments_counter > 0 %>
+      <section>
+        <%= render partial: 'shared/comment', collection: post.recent_comments %>
+      </section>
+    <% end %>
   </article>
 <% end %>
+
