@@ -2,4 +2,6 @@
   <%= render "shared/user_card", user: @user %>
   </br>
   <%= render partial: "shared/post_card", collection: @posts, as: :post, locals: { user: @user, show_comments: true } %>
+
+  <button class="self-center">Pagination</button>
 </main>
