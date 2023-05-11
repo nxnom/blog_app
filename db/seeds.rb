@@ -8,7 +8,7 @@ ben = User.create(
 iu = User.create(
   name: 'IU',
   bio: 'Lee Ji-eun, known professionally as IU, is a South Korean singer-songwriter and actress. She signed with Kakao M in 2007 as a trainee and debuted as a singer at the age of fifteen with her album Lost and Found. Her follow-up albums, Growing Up and IU...IM, brought her mainstream success, but it was through "Good Day", the lead single from her 2010 album Real, that she achieved national stardom. "Good Day" spent five consecutive weeks at the top position of South Korea\'s Gaon Digital Chart, a joint record along with Psy\'s "Gangnam Style".',
-  photo: 'https://en.wikipedia.org/wiki/File:IU_posing_for_Marie_Claire_Korea_March_2022_issue_03.jpg'
+  photo: 'https://static.asiachan.com/IU.full.251579.jpg'
 )
 
 punch = User.create(
