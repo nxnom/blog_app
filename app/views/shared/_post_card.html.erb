@@ -13,9 +13,9 @@
     </div>
 
     <% show_comments ||= is_post_view ? true : false %>
-    <% comments = is_post_view ? post.comments : post.recent_comments %>
+    <% comments = get_comments(post: post, is_post_view: is_post_view, show_comments: show_comments)  %>
 
-    <% if show_comments && comments.length > 0 %>
+    <% if comments.length > 0 %>
       <section>
         <%= render partial: 'shared/comment', collection: comments %>
       </section>
