@@ -21,10 +21,4 @@ class PostsController < ApplicationController
 
     redirect_to user_post_path(current_user, @post)
   end
-
-  private
-
-  def current_user
-    User.first
-  end
 end

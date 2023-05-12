@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :posts, only: %i[index show new create]
   end
 
+  post '/posts/:id/comments', to: 'comments#create', as: 'post_comments'
+
   # Defines the root path route ("/")
   root to: 'users#index'
 end
