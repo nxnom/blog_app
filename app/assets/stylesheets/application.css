@@ -37,6 +37,10 @@ span {
   opacity: 0.8;
 }
 
+input {
+  width: 100%;
+}
+
 .self-center {
   align-self: center;
 }
