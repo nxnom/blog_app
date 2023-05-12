@@ -8,5 +8,7 @@
   <%= render partial: "shared/post_card", collection: @user.recent_posts, as: :post, locals: { user: @user } %>
 
   <%= link_to 'Back', root_path %>
+
+  <%= link_to "Create new post", new_user_post_path(@user), class:"button self-center" %>
   <%= link_to "See all posts", user_posts_path(@user), class:"button self-center" %>
 </main>
