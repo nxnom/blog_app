@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   post '/posts/:id/comments', to: 'comments#create', as: 'post_comments'
+  post '/posts/:post_id/likes', to: 'likes#create', as: 'post_likes'
 
   # Defines the root path route ("/")
   root to: 'users#index'
