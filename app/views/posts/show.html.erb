@@ -1,3 +1,8 @@
 <main>
   <%= render "shared/post_card", post: @post, user: params['user_id'], is_post_view: true %>
+
+  <h3>New Comment</h3>
+  <%= render "comments/form", post: @post %>
+
+  <%= link_to "Back", user_posts_path(@post.user), class: "btn btn-primary" %>
 </main>
