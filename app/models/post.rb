@@ -12,7 +12,7 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   def recent_comments
-    comments(3)
+    comments(5)
   end
 
   def comments(limit = nil)
