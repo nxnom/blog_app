@@ -1,15 +1,35 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  author: one
-  title: MyString
-  text: MyString
-  comments_counter: 1
+loving:
+  title: Ben - Love, ing
+  text: Love, ing is a song by South Korean singer Ben. It was released on February 28, 2017, by Magic Strawberry Sound as a digital single. The song was written by Park Ji-hee and composed by Park Geun-cheol.
+  user: ben
   likes_counter: 1
+  comments_counter: 1
 
-two:
-  author: two
-  title: MyString
-  text: MyString
-  comments_counter: 1
+one_eighty_deg:
+  title: Ben - 180 Degree
+  text: 180 Degree is a song by South Korean singer Ben. It was released on October 16, 2017, by Magic Strawberry Sound as a digital single. The song was written by Park Ji-hee and composed by Park Geun-cheol.
+  user: ben
+
+dream:
+  title: IU - Dream
+  text: Dream is a song by South Korean singer-songwriter IU. It was released on December 9, 2010, by LOEN Entertainment as the lead single from her third extended play, Real. The song was written by Kim Eana and composed by Lee Min-soo.
+  user: iu
+
+good_day:
+  title: IU - Good Day
+  text: Good Day is a song by South Korean singer-songwriter IU. It was released on December 9, 2010, by LOEN Entertainment as the lead single from her third extended play, Real. The song was written by Kim Eana and composed by Lee Min-soo.
+  user: iu
   likes_counter: 1
+  comments_counter: 1
+
+we_breaking_up:
+  title: Punch - We're Breaking Up
+  text: We're Breaking Up is a song by South Korean singer Punch. It was released on June 16, 2021, by Woollim Entertainment as a digital single. The song was written by Punch and composed by Park Geun-cheol.
+  user: punch
+
+stay_with_me:
+  title: Punch - Stay With Me
+  text: Stay with Me is a song by South Korean singer Punch. It was released on December 3, 2016, by CJ E&M as a digital single. The song was written by Punch and composed by Park Geun-cheol.
+  user: punch
