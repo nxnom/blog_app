@@ -1,4 +1,16 @@
 # Users
+admin = User.create(
+  email: 'admin@gmail.com',
+  password: 'password',
+  name: 'Admin',
+  bio: 'I am the admin',
+  photo: "https://media.istockphoto.com/vectors/profile-placeholder-image-gray-silhouette-no-photo-vector-id1016744004?k=6&m=1016744004&s=612x612&w=0&h=L-6pLRmsCm-LHeaC493SSAOSB5ftQB8s3MX87WrktMU=",
+  reset_password_token: 'admin123',
+  confirmed_at: Time.now,
+  role: 'admin'
+)
+
+
 ben = User.create(
   email: 'ben@naver.com',
   password: 'password',

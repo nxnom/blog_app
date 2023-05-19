@@ -4,4 +4,10 @@ module PostsHelper
 
     is_post_view ? post.comments : post.recent_comments
   end
+
+  def can_destroy_post?(post)
+    return false unless user_signed_in?
+
+    current_user.admin? || post.user == current_user
+  end
 end

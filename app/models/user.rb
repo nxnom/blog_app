@@ -21,4 +21,12 @@ class User < ApplicationRecord
   def recent_posts
     Post.where(author_id: id).order(created_at: :desc).limit(3)
   end
+
+  def admin?
+    role == 'admin'
+  end
+
+  def update_posts_counter
+    update(posts_counter: posts.size)
+  end
 end
