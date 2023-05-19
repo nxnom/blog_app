@@ -30,7 +30,9 @@ class PostsController < ApplicationController
 
     @post.destroy
 
-    redirect_to user_posts_path(current_user)
+    @post.user.update_posts_counter
+
+    redirect_to user_posts_path(params['user_id'])
   end
 
   private

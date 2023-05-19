@@ -19,6 +19,10 @@ class Post < ApplicationRecord
     Comment.includes(:user).where(post_id: id).order(created_at: :desc).limit(limit)
   end
 
+  def update_comments_counter
+    update(comments_counter: comments.size)
+  end
+
   private
 
   def update_posts_counter

@@ -1,4 +1,10 @@
 <div id="<%= dom_id comment %>">
-  <cite><%= comment.user.name %>: </cite>
-  <span><%= comment.text %></span>
+  <div class="row">
+    <span>
+      <cite><%= comment.user.name %>: </cite>
+      <span><%= comment.text %></span>
+    </span>
+
+    <%= render "comments/delete_comment", comment: comment %>
+  </div>
 </div>

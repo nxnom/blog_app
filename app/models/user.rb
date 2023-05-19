@@ -25,4 +25,8 @@ class User < ApplicationRecord
   def admin?
     role == 'admin'
   end
+
+  def update_posts_counter
+    update(posts_counter: posts.size)
+  end
 end
