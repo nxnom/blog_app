@@ -1,12 +1,8 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    # A user can delete a post if it is theirs or if they have an admin role (column role has value "admin"). Use CanCanCan for this authorization.
-
-    user ||= User.new # guest user (not logged in)
+    user ||= User.new
 
     if user.role == 'admin'
       can :manage, :all
