@@ -6,7 +6,9 @@ class CommentsController < ApplicationController
       text: params['text']
     )
 
-    redirect_to user_post_path(current_user, @comment.post)
+    post = Post.find_by(id: params['id'])
+
+    redirect_to user_post_path(post.author_id, post)
   end
 
   private
