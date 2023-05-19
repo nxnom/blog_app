@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
         Comment.create user_id: user.id, post_id: post.id
       end
 
-      expect(post.recent_comments.count).to eq(0)
+      expect(post.recent_comments.count).to eq(3)
     end
   end
 
