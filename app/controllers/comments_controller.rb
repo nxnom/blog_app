@@ -4,13 +4,18 @@ class CommentsController < ApplicationController
   end
 
   def create
-    Comment.create(
+    @comment = Comment.create(
       user_id: current_user.id,
       post_id: params['post_id'],
       text: params['text']
     )
 
-    refresh
+    post = Post.find_by(id: params['post_id'])
+
+    respond_to do |format|
+      format.html { redirect_to user_post_path(post.author_id, post) }
+      format.json { render :show, status: :created }
+    end
   end
 
   def destroy
@@ -18,12 +23,6 @@ class CommentsController < ApplicationController
 
     comment.post.update_comments_counter
 
-    refresh
-  end
-
-  private
-
-  def refresh
     post = Post.find_by(id: params['post_id'])
 
     respond_to do |format|
@@ -31,6 +30,8 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
 
   def comment_params
     params.require(:comment).permit(:text)
