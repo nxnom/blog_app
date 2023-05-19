@@ -22,6 +22,17 @@ class PostsController < ApplicationController
     redirect_to user_post_path(current_user, @post)
   end
 
+  def destroy
+    @post = Post.includes(:comments).find_by(id: params['id'], author_id: params['user_id'])
+
+    @post.comments.each(&:destroy)
+    @post.likes.each(&:destroy)
+
+    @post.destroy
+
+    redirect_to user_posts_path(current_user)
+  end
+
   private
 
   def post_params
