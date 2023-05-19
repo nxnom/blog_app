@@ -23,6 +23,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    load_and_authorize_resource
+
     @post = Post.includes(:comments).find_by(id: params['id'], author_id: params['user_id'])
 
     @post.comments.each(&:destroy)

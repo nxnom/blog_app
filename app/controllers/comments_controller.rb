@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    load_and_authorize_resource
+
     comment = Comment.destroy(params['id'])
 
     comment.post.update_comments_counter
