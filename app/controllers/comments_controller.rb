@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+  def index
+    @comments = Comment.where(post_id: params['post_id'])
+  end
+
   def create
     Comment.create(
       user_id: current_user.id,
