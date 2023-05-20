@@ -1,0 +1,142 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/posts/{post_id}/comments":
+    get:
+      summary: Retrieves comments
+      tags:
+      - Comments
+      parameters:
+      - name: post_id
+        in: path
+        description: Post ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Comments retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    text:
+                      type: string
+                    created_at:
+                      type: string
+                      format: date_time
+                    updated_at:
+                      type: string
+                      format: date_time
+                    post_id:
+                      type: integer
+                  required:
+                  - id
+                  - text
+                  - created_at
+                  - updated_at
+                  - post_id
+    post:
+      summary: Creates a comment
+      tags:
+      - Comments
+      description: Creates a comment you need to be logged in to create a comment
+      parameters:
+      - name: post_id
+        in: path
+        description: Post ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Comment created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  text:
+                    type: string
+                  created_at:
+                    type: string
+                    format: date_time
+                  updated_at:
+                    type: string
+                    format: date_time
+                  post_id:
+                    type: integer
+                  user_id:
+                    type: integer
+                required:
+                - id
+                - text
+                - created_at
+                - updated_at
+                - post_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+              required:
+              - text
+  "/users/{user_id}/posts":
+    get:
+      summary: Retrieves posts
+      tags:
+      - Posts
+      parameters:
+      - name: user_id
+        in: path
+        description: User ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Posts retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    text:
+                      type: string
+                    created_at:
+                      type: string
+                      format: date_time
+                    updated_at:
+                      type: string
+                      format: date_time
+                    author_id:
+                      type: integer
+                  required:
+                  - id
+                  - title
+                  - content
+                  - created_at
+                  - updated_at
+                  - user_id
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
